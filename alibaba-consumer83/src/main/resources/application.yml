@@ -1,0 +1,22 @@
+server:
+  port: 83
+
+spring:
+  application:
+    name: spring-cloud-alibaba-consumer
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+  config:
+    import: nacos:spring-cloud-alibaba-consumer.yaml?group=DEFAULT_GROUP&refreshEnabled=true
+
+
+
+
+
+
+
+
+
+

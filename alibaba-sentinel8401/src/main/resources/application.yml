@@ -1,0 +1,25 @@
+server:
+  port: 8401
+
+spring:
+  application:
+    name: spring-cloud-alibaba-sentinel
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+    sentinel:
+      transport:
+        dashboard: localhost:8080
+        port: 8719
+      datasource:
+        ds1:
+          nacos:
+            server-addr: localhost:8848
+            data-id: testSentinelResource
+            rule-type: flow
+            data-type: json
+
+
+
+

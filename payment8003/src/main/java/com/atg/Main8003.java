@@ -1,0 +1,15 @@
+package com.atg;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import tk.mybatis.spring.annotation.MapperScan;
+
+@SpringBootApplication
+@MapperScan("com.atg.mapper")
+@EnableDiscoveryClient
+public class Main8003 {
+    public static void main(String[] args) {
+        SpringApplication.run(Main8003.class, args);
+    }
+}

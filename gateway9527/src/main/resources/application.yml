@@ -1,0 +1,24 @@
+server:
+  port: 9527
+
+spring:
+  application:
+    name: cloud-gateway
+
+  cloud:
+    consul:
+      port: 8500
+      host: localhost
+      discovery:
+        prefer-ip-address: true
+        service-name: ${spring.application.name}
+    gateway:
+      routes:
+        - id: pay_route1
+          uri: lb://cloud-payment-service
+          predicates:
+            - Path=/gateway/get/**
+            #- Before=2017-01-20T17:42:47.789-07:00[America/Denver] # before 在时间之前
+            #- Query=red, green
+            #- My=gold
+
